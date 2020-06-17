@@ -1,0 +1,12 @@
+.card{
+  width: auto;
+}
+.card-title {
+  margin-bottom: .75rem;
+  color: #007bfe;
+  font-size: x-large;
+}
+h5#link {
+  text-align: right;
+  margin-top: -36px;
+}
