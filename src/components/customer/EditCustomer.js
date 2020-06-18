@@ -16,6 +16,17 @@ class EditCustomer extends React.Component{
     }
   }
 
+  static getDerivedStateFromProps(props, state){
+    if(props.customer._id == state.id){
+      return{
+        id : props.customer._id,
+        name: props.customer.name,
+        email: props.customer.email,
+        mobile: props.customer.mobile
+      }
+    }
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name] : e.target.value

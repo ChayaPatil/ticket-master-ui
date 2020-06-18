@@ -1,0 +1,42 @@
+		<tr *ngFor="let pre of preOrderPriceManagementList; let i=index;">
+							<td *ngIf="i%4==0">
+								{{preOrderPriceManagementList[i].month}},{{preOrderPriceManagementList[i].year}}</td>
+							<td *ngIf="i%4==0">
+								<input type="text" name="preOrderPrice" placeholder="Pre Order Price" value=""
+									required="" [(ngModel)]="preOrderPriceManagementList[i].preOrderPrice"
+									class="form-control head" />
+							</td>
+
+							<td *ngIf="i%4==0">
+								{{preOrderPriceManagementList[i+1].month}},{{preOrderPriceManagementList[i+1].year}}
+							</td>
+							<td *ngIf="i%4==0">
+								<input type="text" name="preOrderPrice" placeholder="Pre Order Price" value=""
+									required="" [(ngModel)]="preOrderPriceManagementList[i+1].preOrderPrice"
+									class="form-control head" />
+							</td>
+							<td *ngIf="i%4==0">
+								{{preOrderPriceManagementList[i+2].month}},{{preOrderPriceManagementList[i+2].year}}
+							</td>
+							<td *ngIf="i%4==0">
+								<input type="text" name="preOrderPrice" placeholder="Pre Order Price" value=""
+									required="" [(ngModel)]="preOrderPriceManagementList[i+2].preOrderPrice"
+									class="form-control head" />
+							</td>
+							<td *ngIf="i%4==0">
+								{{preOrderPriceManagementList[i+3].month}},{{preOrderPriceManagementList[i+3].year}}
+							</td>
+							<td *ngIf="i%4==0">
+								<input type="text" name="preOrderPrice" placeholder="Pre Order Price" value=""
+									required="" [(ngModel)]="preOrderPriceManagementList[i+3].preOrderPrice"
+									class="form-control head" />
+							</td>
+								<td *ngIf="i%4==0">
+								{{preOrderPriceManagementList[i+3].month}},{{preOrderPriceManagementList[i+3].year}}
+							</td>
+							<td *ngIf="i%4==0">
+								<input type="text" name="preOrderPrice" placeholder="Pre Order Price" value=""
+									required="" [(ngModel)]="preOrderPriceManagementList[i+3].preOrderPrice"
+									class="form-control head" />
+							</td>
+						</tr>

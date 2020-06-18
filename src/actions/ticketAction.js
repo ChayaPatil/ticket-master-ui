@@ -67,3 +67,29 @@ export const startDeleteTicket = (id, redirect) => {
       })
     }
   }
+
+  export const setEditTicket = (ticket) => {
+    return {type: 'EDIT_TICKET', payload : ticket }
+  }
+
+  export const startEditTicket = (id, formData, redirect) => {
+    return(dispatch) => {
+      axios.put(`/tickets/${id}`, formData, {
+        headers : {
+          'x-auth' : localStorage.getItem('authToken')
+        }
+      })
+      .then((response) => {
+        if(response.data.hasOwnProperty('errors')){
+          alert(response.data.message)
+        } else {
+          const ticket = response.data
+          dispatch(setEditTicket(ticket))
+          redirect()
+        }
+      })
+      .catch((err) => {
+        alert(err)
+      })
+    }
+  }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { startAddTicket } from '../../actions/ticketAction'
+import { startEditTicket } from '../../actions/ticketAction'
 import { Form, Container } from 'react-bootstrap'
 
 class EditTicket extends React.Component{
@@ -8,6 +8,7 @@ class EditTicket extends React.Component{
   constructor(props){
     super(props)
     this.state = {
+      id : props.ticket._id,
       code: this.props.ticket.code,
       customer: props.ticket.customer,
       department: props.ticket.department,
@@ -31,20 +32,21 @@ class EditTicket extends React.Component{
 
   handleSubmit = (e) => {
     e.preventDefault()
+    const id = this.state.id
     const formData = {
       code: this.state.code,
       customer: this.state.customer,
       department: this.state.department,
-      employees : {_id : this.state.employees},
+      employees : this.state.employees,
       priority: this.state.selectedOption,
       message: this.state.message
     }
     console.log(formData)
     const redirect = () => {
-      this.props.history.push("/tickets")
+      this.props.history.push(`/tickets/${id}`)
     }
 
-    this.props.dispatch(startAddTicket(formData, redirect))
+    this.props.dispatch(startEditTicket(id, formData, redirect))
     // console.log(formData)
   }
 
