@@ -36,6 +36,7 @@ function App(props){
   return(
     <BrowserRouter>
       <div>
+      <h1>app</h1>
         {
           Object.keys(props.user).length !== 0 ? (
             <div>
