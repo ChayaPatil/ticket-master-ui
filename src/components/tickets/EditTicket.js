@@ -79,7 +79,6 @@ class EditTicket extends React.Component{
           <Form.Label htmlFor="department">Department</Form.Label>
           <Form.Control as="select" id="department" name ="department" 
           value={this.state.department} onChange={this.handleChange}>
-          <option value='Select'>Select</option>          
           {
             this.props.department.map(ele => {
               return(
@@ -92,7 +91,6 @@ class EditTicket extends React.Component{
           <Form.Label htmlFor="employees">Employees</Form.Label>
           <Form.Control as="select" id="employees" name="employees"
           value={this.state.employees} onChange={this.handleChange}>
-          <option value='Select'>Select</option>
           {
            this.props.employees.map(ele => {
             return (ele.department == this.state.department && 

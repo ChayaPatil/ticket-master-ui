@@ -21,8 +21,12 @@ const ticketReducer = (state=initialTicketState, action) => {
       return state.filter(ele => ele._id !== action.payload)
     }
 
+    case 'SET_STATUS' : {
+      return state.concat(action.payload)
+    }
+
     default : {
-      return [].concat(state)
+      return [...state]
     }
   }
 }

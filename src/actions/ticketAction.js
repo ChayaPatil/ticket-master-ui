@@ -93,3 +93,18 @@ export const startDeleteTicket = (id, redirect) => {
       })
     }
   }
+
+  export const setStatus = (id) => {
+    return { type: 'SET_STATUS', payload: id }
+  }
+
+  export const startEditStatus = (id, isResolved) => {
+    return(dispatch) => {
+      axios.put(`/tickets/${id}`, {isResolved: !isResolved}, {
+        headers : {
+          'x-auth' : localStorage.getItem('authToken')
+        }
+      })
+      dispatch(setStatus(id))
+    }
+  }

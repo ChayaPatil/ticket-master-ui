@@ -20,6 +20,7 @@ class AddCustomer extends React.Component{
     })
   }
   
+
   handleSubmit = (e) => {
     e.preventDefault()
     const formData = {
@@ -27,6 +28,7 @@ class AddCustomer extends React.Component{
       email: this.state.email,
       mobile: this.state.mobile
     }
+    console.log(formData)
 
     const redirect = () => {
       this.props.history.push("/customers")

@@ -1,10 +1,13 @@
 import React from 'react'
+// import Login from '../auth/Login'
+import { Container } from 'react-bootstrap'
 
 function Home(props){
   return(
-    <div>
+    <Container>
       <h1>Ticket Master App</h1>
-    </div>
+      {/*<Login />*/}
+    </Container>
   )
 }
 export default Home

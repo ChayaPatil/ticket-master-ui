@@ -12,8 +12,9 @@ export const startGetEmployee = () => {
       }
     })
     .then((response) => {
-      const employee = response.data
-      dispatch(setEmployee(employee))
+      console.log(response.data)
+      // const employee = response.data
+      // dispatch(setEmployee(employee))
     })
     .catch((err) => {
       alert(err)

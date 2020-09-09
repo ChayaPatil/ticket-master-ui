@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { findEmployee } from '../../selectors/employeeSelector'
 import { Container } from 'react-bootstrap'
+import TicketProgress from '../tickets/TicketProgress'
 
 class ShowEmployee extends React.Component{
 
@@ -18,6 +19,7 @@ class ShowEmployee extends React.Component{
           </div>
         )
       }
+      <TicketProgress />
       </Container>
     )
   }

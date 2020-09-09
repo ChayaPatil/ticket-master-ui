@@ -41,12 +41,12 @@ class Customers extends React.Component{
           </thead>
           <tbody>
             {
-              // conditional rendering
+              // conditional rendering 
               Object.keys(this.props.customer).length !== 0 &&
                 (this.props.customer.map((ele, i) =>{
                 return (
                   <tr key={ele._id}>
-                    <td>{uuidv4()}</td>
+                    <td>{ele._id}</td>
                     <td>{ele.name}</td>
                     <td>{ele.email}</td>
                     <td>{ele.mobile}</td>

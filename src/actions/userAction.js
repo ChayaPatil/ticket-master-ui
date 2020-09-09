@@ -21,6 +21,7 @@ export const startLoginUser = (formData, redirect) => {
         })
         .then((response) => {
           const user = response.data
+          // console.log(user)
           dispatch(setUser(user))
           redirect()
         })
@@ -45,6 +46,7 @@ export const setGetUser = () => {
     })
     .then((response) => {
       const user = response.data
+      // console.log(user)
       dispatch(setUser(user))
     })
     .catch((err) => {

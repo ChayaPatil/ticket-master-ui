@@ -22,7 +22,7 @@ import Tickets from './components/tickets/Tickets'
 import AddTicket from './components/tickets/AddTicket'
 import ShowTicket from './components/tickets/ShowTicket'
 import EditTicket from './components/tickets/EditTicket'
-
+import TicketProgress from './components/tickets/TicketProgress'
 
 import { startUserLogout } from './actions/userAction'
 import './App.css'
@@ -36,7 +36,6 @@ function App(props){
   return(
     <BrowserRouter>
       <div>
-      <h1>app</h1>
         {
           Object.keys(props.user).length !== 0 ? (
             <div>
@@ -48,7 +47,8 @@ function App(props){
                   <Nav.Link href={"/departments"}>Departments</Nav.Link>
                   <Nav.Link href={"/employees"}>Employees</Nav.Link>
                   <Nav.Link href={"/tickets"}>Tickets</Nav.Link>
-                  <Nav.Link href={"/logout"} onClick={handleLogout}>Logout</Nav.Link>
+                  <Nav.Link href={"/pro"}>Tickets</Nav.Link>
+                  <Nav.Link href="#" onClick={handleLogout}>Logout</Nav.Link>
                 </Nav>
               </Navbar>
             </div>
@@ -85,6 +85,7 @@ function App(props){
           <Route path="/tickets/add" component={AddTicket} exact={true} />
           <Route path="/tickets/:id" component={ShowTicket} exact={true} />
           <Route path="/tickets/edit/:id" component={EditTicket} exact={true} />
+          <Route path="/pro" component={TicketProgress} />
         </Switch>
       </div>
     </BrowserRouter>
@@ -93,7 +94,7 @@ function App(props){
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user
+    user: state.user,
   }
 }
 

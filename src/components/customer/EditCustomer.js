@@ -11,21 +11,26 @@ class EditCustomer extends React.Component{
     this.state = {
       id : props.customer._id,
       name: props.customer.name,
-      email: props.customer.email,
-      mobile: props.customer.mobile
+      email: props.customer.email 
     }
   }
 
-  static getDerivedStateFromProps(props, state){
-    if(props.customer._id == state.id){
-      return{
-        id : props.customer._id,
-        name: props.customer.name,
-        email: props.customer.email,
-        mobile: props.customer.mobile
-      }
-    }
-  }
+  // static getDerivedStateFromProps(nextProps){
+  //   // console.log(state.id === props.customer._id)
+  //   if(nextProps.customer.length !== 0){
+  //     const {name, email} = nextProps.customer
+  //     this.setState({name, email})
+  //   }
+  // }
+
+  // componentWillReceiveProps(nextProps) {
+  //   // Any time props.email changes, update state.
+  //   if (nextProps.id !== this.props.customer._id) {
+  //     this.setState({
+  //       email: nextProps._id
+  //     });
+  //   }
+  // }
 
   handleChange = (e) => {
     this.setState({
@@ -39,7 +44,6 @@ class EditCustomer extends React.Component{
       const formData ={
         name:this.state.name,
         email: this.state.email,
-        mobile: this.state.mobile
     }
     // console.log(formData)
     const redirect = () => {
@@ -50,7 +54,7 @@ class EditCustomer extends React.Component{
   }
 
   render(){
-    // console.log(this.props)
+    console.log(this.props)
     return(
       <Container>
         <h2>Edit Customer</h2>

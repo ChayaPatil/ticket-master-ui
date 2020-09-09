@@ -5,8 +5,8 @@ import { Form, Container } from 'react-bootstrap'
 
 class AddTicket extends React.Component{
 
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
       code: '',
       customer: '',

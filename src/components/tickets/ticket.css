@@ -10,3 +10,13 @@ h5#link {
   text-align: right;
   margin-top: -36px;
 }
+div#code {
+  margin-left: auto;
+}
+form#searchForm {
+  float: right;
+  margin-top: -20px;
+}
+div#ticketTable {
+  padding: 25px 0;
+}

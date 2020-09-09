@@ -48,6 +48,7 @@ class Departments extends React.Component{
 
   render(){
     console.log(this.props.department)
+    let number = 0
     return(
       <Container>
       <Row>

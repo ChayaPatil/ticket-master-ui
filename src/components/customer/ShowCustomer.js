@@ -7,8 +7,6 @@ import { Container } from 'react-bootstrap'
 class  ShowCustomer extends React.Component{
 
   render(){
-    // console.log(this.props)
-    // console.log(this.props.match.params.id === this.props.customer._id)
     return(
       <Container>
         {
